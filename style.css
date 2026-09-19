@@ -91,7 +91,13 @@ button{font:inherit; color:inherit; cursor:pointer}
 .go.on{opacity:1; pointer-events:auto}
 
 /* ---------- 1. note ---------- */
-.note-sec{padding:72px 0 40px}
+.note-sec{padding:56px 0 40px}
+.pin-photo{
+  position:relative; z-index:2; width:56%; max-width:260px; margin:0 0 -26px; margin-inline-start:auto;
+  background:#fff; padding:8px; border:3px solid var(--ink); box-shadow:4px 5px 0 var(--ink); transform:rotate(-4deg);
+}
+.pin-photo img{border-radius:3px}
+.pin-photo .tape{top:-12px; right:auto; left:34%; width:70px; transform:rotate(-8deg)}
 .note{
   position:relative; background:var(--card); border:3px solid var(--ink); border-radius:6px;
   padding:34px 22px 26px; transform:rotate(-1.4deg);
@@ -170,6 +176,20 @@ button{font:inherit; color:inherit; cursor:pointer}
 .why .sticker{transform:rotate(5deg)}
 .sticker-cap{display:block; text-align:center; font-size:13px; font-weight:700; line-height:1.6; padding-top:4px}
 
+/* ---------- 5b. film strip ---------- */
+.strip-sec{padding:30px 0 40px}
+.strip{
+  display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; overscroll-behavior-x:contain;
+  margin:12px -8px 8px; padding:28px 18px; transform:rotate(-2deg); outline:none;
+  background-color:var(--ink); background-attachment:local;
+  background-image:repeating-linear-gradient(90deg, #FFF6EA 0 9px, transparent 9px 22px), repeating-linear-gradient(90deg, #FFF6EA 0 9px, transparent 9px 22px);
+  background-size:100% 7px, 100% 7px; background-position:0 10px, 0 calc(100% - 10px); background-repeat:no-repeat;
+}
+.strip::-webkit-scrollbar{display:none}
+.strip figure{flex:0 0 68%; max-width:300px; margin:0; scroll-snap-align:center; aspect-ratio:4/5; border-radius:4px; overflow:hidden; background:#2d1c16}
+.strip img{width:100%; height:100%; object-fit:cover}
+.strip-hint{display:block; font-size:13px; color:var(--ink-soft); text-align:left}
+
 /* ---------- 6. form ---------- */
 .form-sec{padding:60px 0 40px}
 .form{
@@ -238,12 +258,12 @@ button{font:inherit; color:inherit; cursor:pointer}
 @keyframes rise{from{opacity:0; transform:translateY(30px)}}
 .love{font-family:var(--nastaliq); font-size:34px; line-height:2.3; text-align:center; margin:10px 0 26px}
 .love .name{color:var(--stamp)}
-.end-grid{position:relative; height:500px}
+.end-grid{position:relative; height:560px}
 .polaroid{position:absolute; right:4%; top:0; width:56%; background:#fff; padding:10px 10px 0; border:3px solid var(--ink); box-shadow:5px 6px 0 var(--ink); transform:rotate(4deg)}
 .polaroid img{aspect-ratio:4/5; object-fit:cover; object-position:50% 30%; width:100%}
 .polaroid figcaption{font-size:13px; font-weight:700; text-align:center; padding:6px 0 8px; line-height:1.6}
-.end-grid .sticker{position:absolute; left:0; top:232px; width:47%; transform:rotate(-6deg)}
-.end-grid .hug{position:absolute; right:6%; bottom:-24px; width:170px}
+.end-grid .sticker{position:absolute; left:0; top:290px; width:46%; transform:rotate(-6deg)}
+.end-grid .kiss{left:auto; right:2%; top:336px; width:46%; transform:rotate(5deg); z-index:2}
 .share{
   display:block; margin:30px auto 0; background:var(--sky); border:3px solid var(--ink); border-radius:999px;
   padding:8px 22px; font-weight:800; box-shadow:0 4px 0 var(--ink);
